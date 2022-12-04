@@ -47,9 +47,6 @@ public class HomePage {
     @FindBy(id = "continue")
     private WebElement continueButton;
 
-    @FindBy(className = "summary_total_label")
-    private WebElement totalLabel;
-
     private WebDriver driver;
 
     @FindBy(xpath = "//h3")
@@ -90,6 +87,18 @@ public class HomePage {
 
     @FindBy(xpath = "//a[contains(@href, \"company\")]")
     public WebElement linkedLink;
+
+    @FindBy(xpath = "//*[@id='add-to-cart-sauce-labs-bolt-t-shirt']")
+    public WebElement addCartSauceLabsBoltButton;
+
+    @FindBy(xpath = "//h3")
+    public WebElement error2;
+
+    @FindBy(xpath = "//div[@class=\"summary_subtotal_label\"]")
+    public WebElement SubtotalLabel;
+
+    @FindBy(xpath = "//*[@id='remove-sauce-labs-bolt-t-shirt']")
+    public WebElement removeSauceLabsBoltShirtButton;
     
 
     public HomePage(WebDriver driver) {
@@ -129,8 +138,8 @@ public class HomePage {
         continueButton.click();
     }
 
-    public String getTotal() {
-        return totalLabel.getText();
+    public String getSubTotal() {
+        return SubtotalLabel.getText();
     }
 
     public boolean checkIfCartIsEmpty(){

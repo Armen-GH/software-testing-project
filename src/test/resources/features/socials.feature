@@ -6,7 +6,6 @@ Feature: Tests The Social Icons
     And the password is 'secret_sauce'
     When login button is clicked
     Then '<social>' button takes us to the corresponding '<page>'
-    And navigate to 'https://www.linkedin.com/company/sauce-labs/'
 
     Examples:
       | social   | page                                         |

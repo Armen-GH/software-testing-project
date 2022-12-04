@@ -22,4 +22,4 @@ Feature: Tests the drop down menu buttons
     And Sauce Labs Bike Light is added to the cart
     And the drop down menu button is clicked
     And Reset App state button is clicked
-    Then cart items are removed
+    Then cart is empty

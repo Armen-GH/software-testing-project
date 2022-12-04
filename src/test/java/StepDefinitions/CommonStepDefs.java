@@ -3,7 +3,9 @@ package StepDefinitions;
 import Pages.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class CommonStepDefs extends AbstractStepDefs {
     @Given("SwagLabs website is open")
@@ -24,5 +26,11 @@ public class CommonStepDefs extends AbstractStepDefs {
     @When("login button is clicked")
     public void theLoginButtonIsClicked() {
         homePage.clickLoginButton();
+    }
+
+    @Then("cart is empty")
+    public void cartItemsAreRemoved() {
+        homePage.clickOnCart();
+        Assert.assertTrue(homePage.checkIfCartIsEmpty());
     }
 }

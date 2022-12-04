@@ -51,16 +51,4 @@ public class MenuButtonsStepDefs {
     public void resetAppStateButtonIsClicked() {
         homePage.resetSidebarLinkAppState.click();
     }
-
-    @Then("cart items are removed")
-    public void cartItemsAreRemoved() {
-        homePage.clickOnCart();
-        Assert.assertTrue(homePage.checkIfCartIsEmpty());
-    }
-
-    @Then("cart has items")
-    public void cartHasItems() {
-        homePage.clickOnCart();
-        Assert.assertFalse(homePage.checkIfCartIsEmpty());
-    }
 }
