@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class HomePage {
     private static final String PAGE_URL = "https://www.saucedemo.com/";
 
@@ -52,6 +54,33 @@ public class HomePage {
 
     @FindBy(xpath = "//h3")
     public WebElement error;
+
+    @FindBy(xpath = "/html/body/div[1]/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div")
+    public WebElement sauceLabsBackpackInventoryItem;
+
+    @FindBy(xpath = "//*[@id='react-burger-menu-btn']")
+    public WebElement openMenuButton;
+
+    @FindBy(xpath = "//*[@id='about_sidebar_link']")
+    public WebElement aboutSidebarLinkItemMenu;
+
+    @FindBy(xpath = "//*[@id='inventory_sidebar_link']")
+    public WebElement inventorySidebarLinkAllItems;
+
+    @FindBy(xpath = "//*[@id='logout_sidebar_link']")
+    public WebElement logoutSidebarLinkItemMenu;
+
+    @FindBy(xpath = "//*[@id='add-to-cart-sauce-labs-backpack']")
+    public WebElement addCartSauceLabsBackpackButton;
+
+    @FindBy(xpath = "//*[@id='add-to-cart-sauce-labs-bike-light']")
+    public WebElement addCartSauceLabsBikeButton;
+
+    @FindBy(xpath = "//*[@id='reset_sidebar_link']")
+    public WebElement resetSidebarLinkAppState;
+
+    @FindBy(xpath = "//div[@class=\"cart_item\"]")
+    private WebElement cartItem;
     
 
     public HomePage(WebDriver driver) {
@@ -93,5 +122,12 @@ public class HomePage {
 
     public String getTotal() {
         return totalLabel.getText();
+    }
+
+    public boolean checkIfCartIsEmpty(){
+        List<WebElement> cart = driver.findElements(By.xpath("//div[@class=\"cart_item\"]"));
+        if(cart.isEmpty()){return true;}
+        else {
+        return false;}
     }
 }
