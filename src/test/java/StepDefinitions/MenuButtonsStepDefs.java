@@ -12,15 +12,6 @@ import static StepDefinitions.AbstractStepDefs.driver;
 import static StepDefinitions.AbstractStepDefs.homePage;
 
 public class MenuButtonsStepDefs {
-    @And("the username is {string}")
-    public void theUsernameIsStandard_user(String username) {
-        homePage.fillField(HomePage.USERNAME, username);
-    }
-
-    @And("the password is {string}")
-    public void thePasswordIsSecret_sauce(String password) {
-        homePage.fillField(HomePage.PASSWORD, password);
-    }
 
     @Given("Sauce Labs Fleece Jacket is clicked")
     public void sauceLabsFleeceJacketIsClicked() {

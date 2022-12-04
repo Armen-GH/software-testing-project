@@ -7,10 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class AbstractStepDefs {
-    private static final int WAIT_TIME = 10;
+    private static final int WAIT_TIME = 60;
 
     static WebDriver driver;
 
@@ -22,7 +23,7 @@ public class AbstractStepDefs {
         //options.setHeadless(true);
         //options.addArguments("--no-sandbox");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(WAIT_TIME, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WAIT_TIME));
         homePage = new HomePage(driver);
 
         /*

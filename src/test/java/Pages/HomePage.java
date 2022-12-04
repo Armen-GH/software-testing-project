@@ -81,6 +81,15 @@ public class HomePage {
 
     @FindBy(xpath = "//div[@class=\"cart_item\"]")
     private WebElement cartItem;
+
+    @FindBy(xpath = "//a[@href=\"https://twitter.com/saucelabs\"]")
+    public WebElement twitterLink;
+
+    @FindBy(xpath = "//a[contains(@href, \"facebook\")]")
+    public WebElement facebookLink;
+
+    @FindBy(xpath = "//a[contains(@href, \"company\")]")
+    public WebElement linkedLink;
     
 
     public HomePage(WebDriver driver) {
