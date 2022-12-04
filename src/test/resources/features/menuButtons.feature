@@ -18,8 +18,8 @@ Feature: Tests the drop down menu buttons
       | Log Out   | https://www.saucedemo.com/               |
 
   Scenario:
-    Given Sauce Labs Backpack is added to the cart
-    And Sauce Labs Bike Light is added to the cart
+    Given Sauce Labs Bike Light is added to the cart
+    And Sauce Labs Onesie is added to the cart
     And the drop down menu button is clicked
     And Reset App state button is clicked
     Then cart is empty

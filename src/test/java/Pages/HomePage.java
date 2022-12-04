@@ -99,6 +99,9 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@id='remove-sauce-labs-bolt-t-shirt']")
     public WebElement removeSauceLabsBoltShirtButton;
+
+    @FindBy(xpath = "//*[@id='add-to-cart-sauce-labs-onesie']")
+    public WebElement addCartSauceLabsOnesieButton;
     
 
     public HomePage(WebDriver driver) {
@@ -123,7 +126,7 @@ public class HomePage {
     }
 
     public void addBackPackToCart() {
-        addBackpackToCartButton.click();
+        addCartSauceLabsBackpackButton.click();
     }
 
     public void clickOnCart() {

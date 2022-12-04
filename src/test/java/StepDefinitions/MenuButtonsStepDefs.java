@@ -37,12 +37,12 @@ public class MenuButtonsStepDefs {
             Assert.assertEquals(driver.getCurrentUrl(), url);}
     }
 
-    @Given("Sauce Labs Backpack is added to the cart")
+    @And("Sauce Labs Onesie is added to the cart")
     public void sauceLabsBackpackIsAddedToTheCart() {
-        homePage.addCartSauceLabsBackpackButton.click();
+        homePage.addCartSauceLabsOnesieButton.click();
     }
 
-    @And("Sauce Labs Bike Light is added to the cart")
+    @Given("Sauce Labs Bike Light is added to the cart")
     public void sauceLabsBikeLightIsAddedToTheCart() {
         homePage.addCartSauceLabsBikeButton.click();
     }
