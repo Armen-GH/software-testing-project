@@ -23,8 +23,3 @@ Feature: Tests the drop down menu buttons
     And the drop down menu button is clicked
     And Reset App state button is clicked
     Then cart items are removed
-
-  Scenario:
-    Given Sauce Labs Backpack is added to the cart
-    And Sauce Labs Bike Light is added to the cart
-    Then cart has items
