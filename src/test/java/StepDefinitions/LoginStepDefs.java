@@ -24,6 +24,6 @@ public class LoginStepDefs extends AbstractStepDefs{
 
     @Then("the {string} error message is shown")
     public void msgErrorMessageIsShown(String msg) {
-        Assert.assertEquals(homePage.error2.getText(), msg);
+        Assert.assertEquals(homePage.getError2Text(), msg);
     }
 }

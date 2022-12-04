@@ -12,12 +12,12 @@ import static StepDefinitions.AbstractStepDefs.homePage;
 public class CheckoutStepDef {
     @Given("the Sauce Labs Backpack is added to the cart")
     public void theSauceLabsBackpackIsAddedToTheCart() {
-        homePage.addCartSauceLabsBackpackButton.click();
+        homePage.clickAddBackpackButton();
     }
 
     @And("the Sauce Labs Bolt T-Shirt is added to the cart")
     public void theSauceLabsBoltTShirtIsAddedToTheCart() {
-        homePage.addCartSauceLabsBoltButton.click();
+        homePage.clickAddBoltButton();
     }
 
     @And("the cart icon is clicked")
@@ -57,6 +57,6 @@ public class CheckoutStepDef {
 
     @Then("error {string} is displayed")
     public void errorMsgIsDisplayed(String msg) {
-        Assert.assertEquals(homePage.error.getText(), msg);
+        Assert.assertEquals(homePage.getErrorText(), msg);
     }
 }

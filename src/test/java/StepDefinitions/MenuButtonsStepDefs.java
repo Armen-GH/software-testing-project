@@ -15,40 +15,40 @@ public class MenuButtonsStepDefs {
 
     @Given("Sauce Labs Fleece Jacket is clicked")
     public void sauceLabsFleeceJacketIsClicked() {
-        homePage.sauceLabsBackpackInventoryItem.click();
+        homePage.clickBackpackItem();
     }
 
     @And("the drop down menu button is clicked")
     public void theDropDownMenuButtonIsClicked() {
-        homePage.openMenuButton.click();
+        homePage.clickMenuButton();
     }
 
     @And("{string} option takes us to {string}")
     public void buttonOptionIsSelected(String option, String url) {
         if(option == "All Items") {
-            homePage.inventorySidebarLinkAllItems.click();
+            homePage.clickAllItemsOption();
             Assert.assertEquals(driver.getCurrentUrl(), url);
         }
         else if (option == "About") {
-            homePage.aboutSidebarLinkItemMenu.click();
+            homePage.clickAboutOption();
             Assert.assertEquals(driver.getCurrentUrl(), url);}
         else if (option == "Log Out") {
-            homePage.logoutSidebarLinkItemMenu.click();
+            homePage.clickLogoutOption();
             Assert.assertEquals(driver.getCurrentUrl(), url);}
     }
 
     @And("Sauce Labs Onesie is added to the cart")
     public void sauceLabsBackpackIsAddedToTheCart() {
-        homePage.addCartSauceLabsOnesieButton.click();
+        homePage.clickAddOnesieButton();
     }
 
     @Given("Sauce Labs Bike Light is added to the cart")
     public void sauceLabsBikeLightIsAddedToTheCart() {
-        homePage.addCartSauceLabsBikeButton.click();
+        homePage.clickAddBikeLightButton();
     }
 
     @And("Reset App state button is clicked")
     public void resetAppStateButtonIsClicked() {
-        homePage.resetSidebarLinkAppState.click();
+        homePage.clickResetAppStateButton();
     }
 }

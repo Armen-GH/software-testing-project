@@ -11,13 +11,13 @@ public class SocialsStepDefs {
     @Then("{string} button takes us to the corresponding {string}")
     public void socialButtonIsClicked(String button, String url) {
         if(button == "Twitter") {
-            homePage.twitterLink.click();
+            homePage.clickTwitterButton();
             Assert.assertEquals(driver.getCurrentUrl(), url);
         } else if (button == "Facebook") {
-            homePage.facebookLink.click();
+            homePage.clickFacebookButton();
             Assert.assertEquals(driver.getCurrentUrl(), url);
         } else if (button == "LinkedIn") {
-            homePage.linkedLink.click();
+            homePage.clickLinkedinButton();
             Assert.assertEquals(driver.getCurrentUrl(), url);
         }}
 }

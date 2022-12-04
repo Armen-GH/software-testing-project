@@ -14,6 +14,6 @@ public class RemoveButtonStepDef  extends AbstractStepDefs{
     }
     @But("When Sauce Labs Bolt T-Shirt is removed from the cart")
     public void sauceLabsBoltTShirtIsRemovedFromTheCart() {
-        homePage.removeSauceLabsBoltShirtButton.click();
+        homePage.clickRemoveBoltShirtButton();
     }
 }
